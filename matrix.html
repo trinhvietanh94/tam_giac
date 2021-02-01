@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>matrix</title>
+</head>
+<body>
+<script>
+    let arr = [[1,5,3,2],
+               [5,2,9,5],
+               [7,2,4,3],
+               [2,7,5,3]];
+
+    // //1.   Tính tích từng cột ma trận, tìm max, in ra max
+    // let areaArr= [];
+    // let max = 1;
+    // for (let j=0;j<4;j++) {
+    //     let area = 1;
+    //     for (let i=0;i<arr.length;i++) {
+    //         area *= arr[i][j];
+    //         document.write(area+'</br>')
+    //     }
+    //     areaArr[j]=area;
+    //     max = area > max ? area : max;
+    //
+    // }
+    // document.write(areaArr);
+    // document.write(max);
+
+    //2.   In ra tổng đường chéo chính, đường chéo phụ
+    // let sum1= 0;
+    // let sum2=0;
+    // for (let i=0;i<arr.length;i++) {
+    //     for (let j=0;j<arr[i].length;j++) {
+    //         if (i===j) {
+    //             sum1+=arr[i][j];
+    //         }
+    //     }
+    // }
+    // document.write(sum1+'</br>');
+    //
+    // for (let i=0;i<arr.length;i++) {
+    //     for (let j=0;j<arr[i].length;j++) {
+    //         if (j===arr[i].length-1-i) {
+    //             sum2+=arr[i][j];
+    //         }
+    //     }
+    // }
+    // document.write(sum2);
+
+    // //3.   In ra tổng ma trận trên
+    let sum = 0;
+    for (let i =0;i<arr.length/2;i++) {
+        for (let j=0;j<arr[i].length;j++) {
+            sum += arr[i][j];
+        }
+    }
+    document.write(sum);
+
+    // // 4. In ra tích ma trận dưới
+    // let area = 1;
+    // for (let i=arr.length/2;i<arr.length;i++) {
+    //     for (let j= 0; j<arr[i].length;j++) {
+    //         area *= arr[i][j];
+    //     }
+    // }
+    // document.write(area);
+</script>
+</body>
+</html>
